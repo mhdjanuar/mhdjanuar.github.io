@@ -1,0 +1,378 @@
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+        * {
+        margin: 0;
+        box-sizing: border-box;
+        }
+
+        .btns {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        }
+
+        .section {
+        width: 100%;
+        min-height: 100vh;
+        background-color: #faf7f5;
+        }
+
+        .dashboard-background {
+        background-image: url("asset/cisadane2.jpeg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        }
+
+        .myphoto {
+        width: 200px;
+        height: 200px;
+        background-image: url("asset/januar.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-y: -75px;
+        border-radius: 100px;
+        display: inline-block;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        position: absolute;
+        margin: auto;
+
+        }
+
+        .profil {
+        background-color: #faf7f5
+        }
+
+        .wrap-profile {
+        display: flex;
+        padding: 0px 20px;
+        padding-top: 45px;
+        }
+
+        .my-profile {
+        width: 50%;
+        height: auto;
+        border-right: 1px solid #d1d0cf;
+        padding-right: 10px;
+        }
+
+        .my-skill {
+        width: 50%;
+        height: 300px;
+        padding-left: 50px
+        }
+
+        .title-weight-bold {
+        font-weight: bold;
+        font-size: 30px;
+        }
+
+        .title-skill {
+        margin-top: 15px;
+        font-weight: bold;
+        }
+
+        .loading-bar {
+        max-width: 350px;
+        background-color: #f5f5f5;
+        border: 1px solid #e6e6e6;
+        margin-top: 5px;
+        border-radius: 5px;
+        }
+
+        .progress-bar {
+        height: 30px;
+        background-color: #b5ff78;
+        border-radius: 5px;
+        }
+
+        .text-profil {
+        display: flex;
+        margin-top: 10px;
+        }
+
+        .portofolio {
+        text-align: center;
+        padding: 0px 50px;
+        }
+
+        .my-portofolio {
+
+        height: auto;
+        display: inline-block;
+        border-radius: 10px;
+        padding: 20px 20px;
+        margin-top: 30px;
+        }
+
+        .wrap-porofolio {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 20px;
+        justify-content: center;
+        }
+
+        .card-portofolio {
+        background-color: #FFFFFF;
+        height: 250px;
+        width: 350px;
+        margin-right: 20px;
+        margin-top: 10px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #aaaaaa;
+        }
+
+        .footer {
+        background-color: black;
+        width: 100%;
+        color: white;
+        padding: 50px 30px;
+        }
+
+        .title-work {
+        font-size: 20px;
+        margin-bottom: 5px; 
+        }
+
+        .title-portofolio {
+          margin-top: 15px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        .link-portofolio {
+          margin-top: 25px;
+        }
+
+        .navbar {
+          width: 100%;
+          background-color: #FFFFFF;
+          position: fixed;
+          padding: 10px 10px;
+          display: flex;
+          z-index: 1;
+        }
+
+        .js-btn {
+          padding: 0px 10px;
+          font-size: 15px;
+          font-weight: bold;
+        }
+
+        .logo-profile {
+          width: 50px;
+          height: 50px;
+          margin-right: 10px;
+          margin-top: 30px;
+        }
+
+        .overplay {
+          background: rgba(0, 0, 0, 0.9);;
+          width: 350px;
+          margin-top: -120px;
+          position: absolute;
+          opacity: 0;
+          transition: .5s ease;
+          padding: 20px;
+          font-size: 20px;
+          color: white;
+        }
+
+        .card-portofolio:hover .overplay {
+          opacity: 1;
+        }
+
+        .contact {
+          margin-top: 10px;
+        }
+
+        @media only screen and (max-width: 768px) {
+          /* For mobile phones: */
+          .wrap-profile {
+            display: block;
+          }
+          .my-profile {
+            width: 100%;
+            border-right: none;
+          }
+          .my-skill {
+            width: 100%;
+            height: auto;
+            padding-left: 0px;
+          }
+          .my-portofolio {
+            padding: 20px 0px;
+          }
+          .portofolio {
+            text-align: center;
+            padding: 0px 0px;
+            padding-left: 5px;
+          }
+          .wrap-porofolio {
+              padding-left: 0px;
+          }
+        }
+      </style>
+    </head>
+    <body>  
+        <div class="navbar">
+            <div class="btn js-btn">Home</div>
+            <div class="btn js-btn">About</div>
+            <div class="btn js-btn">Portofolio</div>
+        </div>
+        <div class="section js-section dashboard-background">
+            <!-- <img src="asset/januar.png" > -->
+            <div class="myphoto"></div>
+          </div>
+          <div class="section js-section profil">
+            <div class='wrap-profile'>
+            <div class="my-profile">
+              <div class="title-weight-bold">Front End Developer</div>
+              <div style="margin-top: 20px;">Hallo semua , perkenalkan saya muhammad januar biasa di panggil januar , saya adalah seorang web developer saya suka membuat tampilan website menjadi menarik , saya membuat itu menggunakan CSS dan JavaScript , saya juga sedikit memahami tentang backend developer , seperti REST API yang pernah saya buat menggunakan JavaScript dan Java, selain bahasa pemograman itu saya juga pernah menggunakan PHP untuk project sekolah saya.</div>
+            <div class="title-weight-bold" style="margin-top:50px">Data diri</div>
+              <div class="text-profil">
+                <div style="width:30%">Nama</div>
+                <div>: Muhammad Januar</div>
+              </div>
+              <div class="text-profil">
+                <div style="width:30%">Pendidikan Terakhir</div>
+                <div>: SMK</div>
+              </div>
+              <div class="text-profil">
+                <div style="width:30%">Tempat, Tanggal Lahir</div>
+                <div>: Jakarta, 17 Januari 2001</div>
+              </div>
+              
+              <div class="title-weight-bold" style="margin-top: 50px">Pengalaman Kerja</div>
+              <div style="padding: 5px 0px">
+              <div class="title-work">PT.MRT JAKARTA</div>
+              <div>januari - mei 2018</div> 
+                <div>Membuat website guestbook untuk PT.MRT JAKARTA</div>
+            </div>
+            <div style="padding: 5px 0px">
+              <div class="title-work">PT.IDE 2 SEN</div>
+              <div>november 2019</div> 
+                <div>membantu mebuat website pluktime</div>
+              </div>
+              </div>
+            <div class="my-skill">
+              <div class="title-weight-bold">Kemampuan</div>
+              <div class="title-skill" style='margin-top:30px'> 
+                HTML
+              </div>
+              <div class="loading-bar">
+                <div class="progress-bar" style='width:80%'></div>
+              </div>
+              <div class="title-skill"> 
+                CSS
+              </div>
+              <div class="loading-bar">
+                <div class="progress-bar" style='width:65%'></div>
+              </div>
+              <div class="title-skill"> 
+                JavaSript
+              </div>
+              <div class="loading-bar">
+                <div class="progress-bar" style='width:65%'></div>
+              </div>
+              <div class="title-skill"> 
+                PHP
+              </div>
+              <div class="loading-bar">
+                <div class="progress-bar" style='width:60%'></div>
+              </div>
+          
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="section js-section portofolio">
+            <div class="my-portofolio">
+                <div class="title-weight-bold">Portofolio</div>
+              <div class="wrap-porofolio">
+                <div class="card-portofolio">
+                  <div>
+                    <img style="width: 100%; height: 100%;" src="asset/portofolio-question.png">
+                    <div class="overplay">
+                      <div>Interview App</div>
+                      <div style="display: flex; justify-content: center; margin-top: 15px;">
+                        <div onclick="location.href='https://drive.google.com/file/d/1KewRttdDjGVZrlNjkO6FzXgbpdEiZEEV/view'" style="
+                        padding: 10px 20px;
+                        background-color: green;
+                        margin-right: 10px;
+                        border-radius: 20px;">View</div>
+                        <div onclick="location.href='https://github.com/mhdjanuar/interview-app'" style="
+                        padding: 10px 20px;
+                        background-color: red;
+                        border-radius: 20px;">Github</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-portofolio">
+                  <div>
+                    <img style="width: 100%; height: 100%;" src="asset/portofolio-perpus.png">
+                    <div class="overplay">
+                      <div>Perpustakaan Online</div>
+                      <div style="display: flex; justify-content: center; margin-top: 15px;">
+                        <div style="
+                        padding: 10px 20px;
+                        background-color: green;
+                        margin-right: 10px;
+                        border-radius: 20px;">View</div>
+                        <div style="
+                        padding: 10px 20px;
+                        background-color: red;
+                        border-radius: 20px;">Github</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-portofolio"></div>
+                <div class="card-portofolio"></div>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <div style="font-size: 25px; margin-bottom: 15px;text-decoration: underline;">Kontak</div>
+            <div class="contact"> <img style="width: 20px;" src="asset/gmail.png"> mhdjanuar.17@gmail.com</div>
+            <div class="contact"> <img style="width: 20px;" src="asset/location.png"> Jakarta Timur</div>
+            <div class="contact">  <img style="width: 20px;" src="asset/telephone.png"> +6289507330164</div>
+            <div class="contact"> <img style="width: 20px;" src="asset/LinkedIn.png"> muhammad januar </div>
+          </div>
+    </body>
+    <script>
+        function scrollIt(element) {
+            window.scrollTo({
+                'behavior': 'smooth',
+                'left': 0,
+                'top': element.offsetTop
+        })
+        }
+
+        const btns = document.querySelectorAll('.js-btn');
+        const sections = document.querySelectorAll('.js-section');
+
+        btns[0].addEventListener('click', () => {
+        scrollIt(sections[0]);
+        console.log('sections 1')
+        });
+
+        btns[1].addEventListener('click', () => {
+        scrollIt(sections[1]);
+        console.log('sections 2')
+        });
+
+        btns[2].addEventListener('click', () => {
+        scrollIt(sections[2]);
+        });
+
+    </script>
+</html>
